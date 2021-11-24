@@ -29,7 +29,7 @@ ref_vit_k_mg = 120
 dados = pd.read_excel("Ficha_tec_prep_10.11_v21.xlsx", sheet_name=None)
 nomes = list(dados.keys())
 
-paginas = ["Análise Descritiva Produtos","Agradecimento Especial"]
+paginas = ["Análise Descritiva Produtos"]
 #paginas = ["Início", "Análise Descritiva Produtos","Agradecimento Especial"]
 
 pagina = st.sidebar.radio("Selecione uma página", paginas)
@@ -301,15 +301,4 @@ if pagina == "Análise Descritiva Produtos":
                               },
         )
     st.plotly_chart(fig, use_container_width=True)
-    
-elif pagina == "Agradecimento Especial":
-    st.markdown("""# Agradecimentos Especiais 
-                
-Agradecemos ao colega André Carpinteiro do Amaral, que nos ajudou com alguns insights e análises dos dados
-
-Para quem desejar conhecê-lo para parcerias, abaixo está o link do linkedin dele.
-
-- [Linkedin](https://www.linkedin.com/in/andre-amaral-gb/) 
-
-""")
         
